@@ -8,4 +8,4 @@ RUN go build .
 FROM alpine:latest
 COPY --from=build /src/easy-novnc /
 EXPOSE 8080
-ENTRYPOINT ["/easy-novnc --no-url-password"]
+ENTRYPOINT ["/easy-novnc" , "--no-url-password"]
